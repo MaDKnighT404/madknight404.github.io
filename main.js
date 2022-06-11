@@ -16,12 +16,12 @@ let secondS = 0,
 const body = document.querySelector('body');
 
 
-// buttons
+    // buttons
 
 
 const btnLength = document.querySelectorAll('.btn__length');
-sessionLenght = document.querySelector('.session__text__minutes');
-breakLenght = document.querySelector('.break__text__minutes');
+      sessionLenght = document.querySelector('.session__text__minutes');
+      breakLenght = document.querySelector('.break__text__minutes');
 
 
 
@@ -38,13 +38,13 @@ const start = document.querySelector('.start'),
 // timers
 
 const timerSession = document.querySelector('.timer-session'),
-    timerBreak = document.querySelector('.timer-break')
-secondsSession = document.querySelector('.seconds__session'),
-    minutesSession = document.querySelector('.minutes__session'),
-    secondsBreak = document.querySelector('.seconds__break'),
-    minutesBreak = document.querySelector('.minutes__break');
+      timerBreak = document.querySelector('.timer-break')
+      secondsSession = document.querySelector('.seconds__session'),
+      minutesSession = document.querySelector('.minutes__session'),
+      secondsBreak = document.querySelector('.seconds__break'),
+      minutesBreak = document.querySelector('.minutes__break');
 
-
+      
 const audioStart = document.querySelector('[data-start');
 const audioStop = document.querySelector('[data-stop');
 
@@ -76,14 +76,14 @@ document.addEventListener('keydown', (event) => {
 })
 
 
-btnLength.forEach(btn => {
+btnLength.forEach (btn => {
     btn.addEventListener('click', (event) => {
 
         if (event.target.getAttribute('id') == 'session__down') {
-            if (sessionLenght.textContent > 0) {
-                sessionLenght.textContent = addZero(+sessionLenght.textContent - 5);
-                minutesSession.textContent = sessionLenght.textContent;
-                minuteS = +minutesSession.textContent;
+        if (sessionLenght.textContent > 0) {
+            sessionLenght.textContent = addZero(+sessionLenght.textContent - 5);
+            minutesSession.textContent = sessionLenght.textContent;
+            minuteS = +minutesSession.textContent;
             }
         }
 
@@ -115,11 +115,11 @@ btnLength.forEach(btn => {
 })
 
 
-start.addEventListener('click', () => {
+start.addEventListener('click', ()=> {
     clearInterval(interval);
 
-    if ((minuteS != 0 || secondS != 0) && breakLenght.textContent != 0) {
-        interval = setInterval(startTimer, 1000)
+    if((minuteS != 0 || secondS != 0) && breakLenght.textContent != 0) {
+    interval = setInterval(startTimer, 11)
     }
 
     if (minuteS == 0 && secondS == 0 && minutesSession.textContent == 0 && timerStart === false && pressPause == false) {
@@ -151,18 +151,18 @@ refresh.addEventListener('click', clearAll);
 
 //functions
 
-function addPomodoro() {
+function addPomodoro () {
     const pomodoro = document.createElement('img')
     pomodoro.classList.add('pomodoro');
     pomodoro.src = `img/pomodoro${pomodorosCounter}.png`;
-
+    
     if (circles.textContent <= 15) {
         pomodorosContainer.append(pomodoro);
-    } else {
+    } else { 
 
 
-        modalText.innerHTML =
-            `
+        modalText.innerHTML = 
+        `
         Impressive! <br><br> You work so hard! <br> Please take a break
         `;
         modalWindow.classList.add('show');
@@ -171,7 +171,7 @@ function addPomodoro() {
     }
 
 
-    if (pomodorosCounter == 1) {
+    if(pomodorosCounter == 1) {
         pomodorosCounter++;
     } else {
         pomodorosCounter = 1;
@@ -183,14 +183,14 @@ function addPomodoro() {
 
 
 function createModalMessage(time) {
-    modalText.innerHTML =
-        `
+    modalText.innerHTML = 
+    `
     Sorry! <br><br> You need to set <br> ${time} Length
     `;
 }
 
-function startTimer() {
-    if (circles.textContent == 0 && timerStart === false && pressPause == false) {
+function startTimer () {
+    if ( circles.textContent == 0 && timerStart === false && pressPause == false) { 
         audioStart.play();
         timerStart = true;
     }
@@ -206,7 +206,7 @@ function startTimer() {
 function startSessionTimer() {
     secondS--
     secondsSession.textContent = addZero(secondS);
-
+   
     if (secondS < 0 && sessionEnd === false) {
         secondS = 59;
         secondsSession.textContent = addZero(secondS);
@@ -221,8 +221,8 @@ function startSessionTimer() {
         minuteB = +minutesBreak.textContent;
         sessionEnd = true;
         amountOfSessions++
-        sessionTitle.innerHTML =
-            `
+        sessionTitle.innerHTML = 
+        `
         Session ${amountOfSessions}
         `;
         body.classList.add('night'); // night
@@ -239,10 +239,10 @@ function startSessionTimer() {
 
 function startBreakTimer() {
     if (sessionEnd === true) {
-        secondB--
-        secondsBreak.textContent = addZero(secondB);
+    secondB--
+    secondsBreak.textContent = addZero(secondB);
     }
-    if (secondB < 0 && sessionEnd === true) {
+    if (secondB < 0 &&sessionEnd === true) {
         secondB = 59;
         secondsBreak.textContent = addZero(secondB);
         minuteB--
@@ -256,10 +256,10 @@ function startBreakTimer() {
         sessionEnd = false;
         minutesSession.textContent = sessionLenght.textContent;
         minuteS = +minutesSession.textContent;
-
+        
         amountOfBreaks++;
-        breakTitle.innerHTML =
-            `
+        breakTitle.innerHTML = 
+        `
         Break ${amountOfBreaks}
         `;
         body.classList.add('day'); //day
@@ -269,7 +269,7 @@ function startBreakTimer() {
         pomodorosContainer.classList.remove('tractor_night');
 
         audioStart.play();
-        addPomodoro();
+        addPomodoro ();
     }
 }
 
@@ -277,7 +277,7 @@ function startBreakTimer() {
 
 
 
-function clearAll() {
+function clearAll () {
     clearInterval(interval);
     circles.textContent = 0;
     secondS = 0;
@@ -304,7 +304,7 @@ function clearAll() {
     pressPause = false;
     timerStart = false;
     modalWindow.classList.add('hide')
-
+    
     sessionTitle.innerHTML = 'Session 1';
     breakTitle.innerHTML = 'Break 1';
     amountOfSessions = 1;
@@ -315,20 +315,25 @@ function clearAll() {
 
     pomodorosContainer.classList.add('tractor_day');
     pomodorosContainer.classList.remove('tractor_night');
-
+    
     pomodorosCounter = 1;
 
-    const pomodoros = document.querySelectorAll(".pomodoro");
-    pomodoros.forEach(e => e.remove());
+    // const pomodoros = document.querySelectorAll(".pomodoro");
+    // pomodoros.forEach(e => e.remove());
 
 }
 
 
 
 function addZero(num) {
-    if (num >= 0 && num < 10) {
+    if(num >= 0 && num < 10) {
         return `0${num}`
     } else {
         return num
     }
 }
+
+
+
+
+

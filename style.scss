@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    // font-family: 'Azeret Mono', monospace;
+    font-family: 'Oxygen', sans-serif;
 }
 
 body {
@@ -15,7 +17,7 @@ body {
     color: rgb(222, 209, 209);
     text-shadow: 1px 1px 1px #000;
     font-size: 35px;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .day {
@@ -56,13 +58,14 @@ body {
                 flex:100%;
                 margin-bottom: 30px;
                 color:rgb(241, 74, 13);
-                text-shadow: 2px 1px 2px rgb(12, 51, 4);
+
             }
             & .text {
-                padding: 15px 30px;
+                width: 300px;
+                padding: 15px 40px;
                 margin: 20px;
                 border-radius: 30px;
-                background: linear-gradient(top, rgb(173, 21, 21), rgb(224, 118, 32));
+                background: linear-gradient(top, rgb(173, 21, 21), rgb(246, 112, 67));
             }
             & .btn__length {
                 width: 60px;
@@ -96,7 +99,7 @@ body {
         max-width: 400px;
         padding: 15px 30px;
         border-radius:25px;
-        background: linear-gradient(top, rgb(173, 21, 21), rgb(224, 118, 32));
+        background: linear-gradient(top, rgb(173, 21, 21), rgb(246, 112, 67));
     }
 }
 
@@ -113,11 +116,11 @@ body {
     & .start, .pause, .refresh {
         margin: 20px 15px;
         padding: 5px 70px;
-        background:#F44336;
+        background:rgb(181, 37, 37);
         color: rgb(255, 255, 255);
         text-shadow: 1px 1px 1px #000;
         font-size: 40px;
-        border: 2px solid rgb(12, 51, 4);
+        border: 2px solid #651c16;
         border-radius:25px;
     }
 }
@@ -197,20 +200,21 @@ body {
 }
 
 .pomodoro {
-    max-height: 50px;
-    width: 50px;
+    max-height: 80px;
+    width: 80px;
+    margin-top: -30px;
 }
 
 .pomodoro:nth-child(2) {
-    margin-left: 20px;
-}
-
-.pomodoro:nth-child(7) {
     margin-left: 30px;
 }
 
-.pomodoro:nth-child(12) {
-    margin-left: 30px;
+.pomodoro:nth-child(5) {
+    margin-left: 40px;
+}
+
+.pomodoro:nth-child(8) {
+    margin-left: 40px;
 }
 
 
@@ -250,13 +254,13 @@ body {
     }
 
     .settings .session-conteiner .text  {
-        max-width:calc(60px + (160 - 60) * ((100vw - 320px) / (1200 - 320)));
+        width:calc(70px + (300 - 70) * ((100vw - 320px) / (1200 - 320)));
         font-size: calc(12px + (35 - 12) * ((100vw - 320px) / (1200 - 320)));
-        padding:calc(10px + (15 - 10) * ((100vw - 320px) / (1200 - 320))) calc(10px + (30 - 10) * ((100vw - 320px) / (1200 - 320))); 
+        padding:calc(10px + (15 - 10) * ((100vw - 320px) / (1200 - 320))) calc(10px + (40 - 10) * ((100vw - 320px) / (1200 - 320))); 
         margin:calc(5px + (30 - 5) * ((100vw - 320px) / (1200 - 320)));
     }
     .settings .break-conteiner .text {
-        max-width:calc(60px + (160 - 60) * ((100vw - 320px) / (1200 - 320)));
+        width:calc(70px + (300 - 70) * ((100vw - 320px) / (1200 - 320)));
         font-size: calc(12px + (35 - 12) * ((100vw - 320px) / (1200 - 320)));
         padding:calc(10px + (15 - 10) * ((100vw - 320px) / (1200 - 320))) calc(10px + (30 - 10) * ((100vw - 320px) / (1200 - 320))); 
         margin:calc(5px + (30 - 5) * ((100vw - 320px) / (1200 - 320)));
@@ -312,20 +316,21 @@ body {
 }
 
 .pomodoro {
-    max-height: calc(13px + (50 - 13) * ((100vw - 320px) / (1200 - 320)));
-    width: calc(11px + (50 - 11) * ((100vw - 320px) / (1200 - 320)));
+    height: calc(20px + (80 - 20) * ((100vw - 320px) / (1200 - 320)));
+    width: calc(20px + (80 - 20) * ((100vw - 320px) / (1200 - 320)));
+    margin-top:calc(-5px + (-20 - 5) * ((100vw - 320px) / (1200 - 320)));
 }
 
     .pomodoro:nth-child(2) {
-        margin-left: calc(10px + (20 - 10) * ((100vw - 320px) / (2560 - 320)));
+        margin-left: calc(10px + (30 - 10) * ((100vw - 320px) / (1200 - 320)));
     }
     
-    .pomodoro:nth-child(7) {
-        margin-left: calc(15px + (30 - 15) * ((100vw - 320px) / (2560 - 320)));
+    .pomodoro:nth-child(5) {
+        margin-left: calc(10px + (40 - 10) * ((100vw - 320px) / (1200 - 320)));
     }
     
-    .pomodoro:nth-child(12) {
-        margin-left: calc(15px + (30 - 15) * ((100vw - 320px) / (2560 - 320)));
+    .pomodoro:nth-child(8) {
+        margin-left: calc(10px + (40 - 10) * ((100vw - 320px) / (1200 - 320)));
     }
 
 .circles {
@@ -341,6 +346,18 @@ body {
 @media (width: 1024px) and (height: 768px) {
     body {
         zoom: 60%;
+    }
+
+    .pomodoro:nth-child(2) {
+        margin-left: calc(10px + (30 - 10) * ((100vw - 320px) / (1200 - 320)));
+    }
+    
+    .pomodoro:nth-child(5) {
+        margin-left: calc(10px + (70 - 10) * ((100vw - 320px) / (1200 - 320)));
+    }
+    
+    .pomodoro:nth-child(8) {
+        margin-left: calc(10px + (70 - 10) * ((100vw - 320px) / (1200 - 320)));
     }
 }
 
@@ -362,20 +379,6 @@ body {
     }
 }
 
-// @media (max-width: 920px) and (max-height: 1400px) {
-//     .pomodoros__container {
-//         margin-top: 180px;
-//     }
-// }
-
-// @media (max-width: 550px) and (max-height: 730px) {
-//     .wrapper {
-//         margin-top: 0;
-//     }
-//     .pomodoros__container {
-//         margin-top: 30px;
-//     }
-// }
 
 
 

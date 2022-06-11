@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap");
 *,
 *::before,
 *::after {
@@ -5,6 +6,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Oxygen', sans-serif;
 }
 
 body {
@@ -15,7 +17,6 @@ body {
   color: #ded1d1;
   text-shadow: 1px 1px 1px #000;
   font-size: 35px;
-  overflow: hidden;
 }
 
 .day {
@@ -75,15 +76,15 @@ body {
           flex: 100%;
   margin-bottom: 30px;
   color: #f14a0d;
-  text-shadow: 2px 1px 2px #0c3304;
 }
 
 .settings .session-conteiner .text, .settings .break-conteiner .text {
-  padding: 15px 30px;
+  width: 300px;
+  padding: 15px 40px;
   margin: 20px;
   border-radius: 30px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ad1515), to(#e07620));
-  background: linear-gradient(top, #ad1515, #e07620);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ad1515), to(#f67043));
+  background: linear-gradient(top, #ad1515, #f67043);
 }
 
 .settings .session-conteiner .btn__length, .settings .break-conteiner .btn__length {
@@ -118,8 +119,8 @@ body {
   max-width: 400px;
   padding: 15px 30px;
   border-radius: 25px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ad1515), to(#e07620));
-  background: linear-gradient(top, #ad1515, #e07620);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ad1515), to(#f67043));
+  background: linear-gradient(top, #ad1515, #f67043);
 }
 
 .buttons {
@@ -142,11 +143,11 @@ body {
 .buttons .start, .buttons .pause, .buttons .refresh {
   margin: 20px 15px;
   padding: 5px 70px;
-  background: #F44336;
+  background: #b52525;
   color: white;
   text-shadow: 1px 1px 1px #000;
   font-size: 40px;
-  border: 2px solid #0c3304;
+  border: 2px solid #651c16;
   border-radius: 25px;
 }
 
@@ -223,20 +224,21 @@ body {
 }
 
 .pomodoro {
-  max-height: 50px;
-  width: 50px;
+  max-height: 80px;
+  width: 80px;
+  margin-top: -30px;
 }
 
 .pomodoro:nth-child(2) {
-  margin-left: 20px;
-}
-
-.pomodoro:nth-child(7) {
   margin-left: 30px;
 }
 
-.pomodoro:nth-child(12) {
-  margin-left: 30px;
+.pomodoro:nth-child(5) {
+  margin-left: 40px;
+}
+
+.pomodoro:nth-child(8) {
+  margin-left: 40px;
 }
 
 .circles {
@@ -267,13 +269,13 @@ body {
     max-height: calc(25px + (60 - 25) * ((100vw - 320px) / (1200 - 320)));
   }
   .settings .session-conteiner .text {
-    max-width: calc(60px + (160 - 60) * ((100vw - 320px) / (1200 - 320)));
+    width: calc(70px + (300 - 70) * ((100vw - 320px) / (1200 - 320)));
     font-size: calc(12px + (35 - 12) * ((100vw - 320px) / (1200 - 320)));
-    padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1200 - 320))) calc(10px + (30 - 10) * ((100vw - 320px) / (1200 - 320)));
+    padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1200 - 320))) calc(10px + (40 - 10) * ((100vw - 320px) / (1200 - 320)));
     margin: calc(5px + (30 - 5) * ((100vw - 320px) / (1200 - 320)));
   }
   .settings .break-conteiner .text {
-    max-width: calc(60px + (160 - 60) * ((100vw - 320px) / (1200 - 320)));
+    width: calc(70px + (300 - 70) * ((100vw - 320px) / (1200 - 320)));
     font-size: calc(12px + (35 - 12) * ((100vw - 320px) / (1200 - 320)));
     padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1200 - 320))) calc(10px + (30 - 10) * ((100vw - 320px) / (1200 - 320)));
     margin: calc(5px + (30 - 5) * ((100vw - 320px) / (1200 - 320)));
@@ -311,17 +313,18 @@ body {
     height: calc(50px + (190 - 50) * ((100vw - 320px) / (1200 - 320)));
   }
   .pomodoro {
-    max-height: calc(13px + (50 - 13) * ((100vw - 320px) / (1200 - 320)));
-    width: calc(11px + (50 - 11) * ((100vw - 320px) / (1200 - 320)));
+    height: calc(20px + (80 - 20) * ((100vw - 320px) / (1200 - 320)));
+    width: calc(20px + (80 - 20) * ((100vw - 320px) / (1200 - 320)));
+    margin-top: calc(-5px + (-20 - 5) * ((100vw - 320px) / (1200 - 320)));
   }
   .pomodoro:nth-child(2) {
-    margin-left: calc(10px + (20 - 10) * ((100vw - 320px) / (2560 - 320)));
+    margin-left: calc(10px + (30 - 10) * ((100vw - 320px) / (1200 - 320)));
   }
-  .pomodoro:nth-child(7) {
-    margin-left: calc(15px + (30 - 15) * ((100vw - 320px) / (2560 - 320)));
+  .pomodoro:nth-child(5) {
+    margin-left: calc(10px + (40 - 10) * ((100vw - 320px) / (1200 - 320)));
   }
-  .pomodoro:nth-child(12) {
-    margin-left: calc(15px + (30 - 15) * ((100vw - 320px) / (2560 - 320)));
+  .pomodoro:nth-child(8) {
+    margin-left: calc(10px + (40 - 10) * ((100vw - 320px) / (1200 - 320)));
   }
   .circles {
     right: calc(50px + (185 - 50) * ((100vw - 320px) / (1200 - 320)));
@@ -333,6 +336,15 @@ body {
 @media (width: 1024px) and (height: 768px) {
   body {
     zoom: 60%;
+  }
+  .pomodoro:nth-child(2) {
+    margin-left: calc(10px + (30 - 10) * ((100vw - 320px) / (1200 - 320)));
+  }
+  .pomodoro:nth-child(5) {
+    margin-left: calc(10px + (70 - 10) * ((100vw - 320px) / (1200 - 320)));
+  }
+  .pomodoro:nth-child(8) {
+    margin-left: calc(10px + (70 - 10) * ((100vw - 320px) / (1200 - 320)));
   }
 }
 
