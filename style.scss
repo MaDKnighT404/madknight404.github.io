@@ -19,13 +19,13 @@ body {
 }
 
 .day {
-   background-image: url("img/BG_grass_day.png"), url("img/BG_sky_day.png");
+   background-image: url("img/BG_grass_day.webp"), url("img/BG_sky_day.webp");
    transition: 1s;
 
 }
 
 .night {
-    background-image: url("img/BG_grass_night.png"), url("img/BG_sky_night.png");
+    background-image: url("img/BG_grass_night.webp"), url("img/BG_sky_night.webp");
     transition: 1s;
 
 }
@@ -187,12 +187,12 @@ body {
 }
 
 .tractor_day {
-    background-image: url("img/tractor_day.png"); 
+    background-image: url("img/tractor_day.webp"); 
     transition: background 1s;
 }
 
 .tractor_night {
-   background-image: url("img/tractor_night.png");
+   background-image: url("img/tractor_night.webp");
    transition: background 1s;
 }
 
