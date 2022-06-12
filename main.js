@@ -119,7 +119,7 @@ start.addEventListener('click', ()=> {
     clearInterval(interval);
 
     if((minuteS != 0 || secondS != 0) && breakLenght.textContent != 0) {
-    interval = setInterval(startTimer, 1)
+    interval = setInterval(startTimer, 1000)
         if(pressPause === false) {
             start.classList.add('push_start');
             pause.classList.remove('push_pause');

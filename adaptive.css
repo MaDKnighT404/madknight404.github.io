@@ -83,13 +83,12 @@
     }
 
     .wrapper h1  {
-        margin-top: 150px;
+        margin-top: 10px;
     }
     .settings {
         flex-wrap: wrap;
         width: 700px;
         margin: 0 auto;
-        zoom: 120%;
         font-size: 25px;
 
     }
@@ -100,10 +99,10 @@
         width: 700px;
         flex-wrap: inherit;
         flex:0 1 auto;
+
     }
 
     .timers__wrapper h2 {
-        margin-top: 130px;
         font-size: 80px;
     }
     .settings .session-conteiner h2, .settings .break-conteiner h2 {
@@ -113,21 +112,21 @@
         width: 300px;
     }
 
+    .timers__wrapper {
+        margin-top: 70px;
+    }
+
     .buttons {
-        margin-top: 150px;
+        margin-top: 100px;
     }
 
 
     .pomodoros__container {
         height: 150px;
-        margin-top: 150px;
+        margin-top: 90px;
     }
 
-    /* .pomodoro {
-        max-height: 70px;
-        width: 70px;
-        margin-top: -30px;
-    } */
+
     
     .pomodoro {
         height: calc(60px + (80 - 60) * ((100vw - 320px) / (480 - 320)));
