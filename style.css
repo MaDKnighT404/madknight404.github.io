@@ -154,15 +154,33 @@ body {
 }
 
 .buttons .push_start {
-  background: #1ade5e;
+  background: #9CC55A;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.buttons .start:hover {
+  background: #9CC55A;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .buttons .push_pause {
   background: #e4cc48;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.buttons .pause:hover {
+  background: #e4cc48;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.buttons .refresh:hover {
+  background: #a01313;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .modal__wrapper {
@@ -217,7 +235,7 @@ body {
   display: flex;
   width: 100%;
   height: 190px;
-  margin: 150px auto 0;
+  margin: 100px auto 0;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;

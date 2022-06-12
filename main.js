@@ -327,6 +327,9 @@ function clearAll () {
     
     pomodorosCounter = 1;
 
+    pause.classList.remove('push_pause');
+    start.classList.remove('push_start');
+
     const pomodoros = document.querySelectorAll(".pomodoro");
     pomodoros.forEach(e => e.remove());
 
