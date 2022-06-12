@@ -119,13 +119,11 @@ start.addEventListener('click', ()=> {
     clearInterval(interval);
 
     if((minuteS != 0 || secondS != 0) && breakLenght.textContent != 0) {
-    interval = setInterval(startTimer, 1000)
-    }
-
-    if (minuteS == 0 && secondS == 0 && minutesSession.textContent == 0 && timerStart === false && pressPause == false) {
-        createModalMessage('Session')
-        modalWindow.classList.add('show');
-        modalWindow.classList.remove('hide');
+    interval = setInterval(startTimer, 1)
+        if(pressPause === false) {
+            start.classList.add('push_start');
+            pause.classList.remove('push_pause');
+        }
     }
 
     if (minuteB == 0 && secondB == 0 && minutesBreak.textContent == 0 && timerStart === false && pressPause == false) {
@@ -134,12 +132,23 @@ start.addEventListener('click', ()=> {
         modalWindow.classList.remove('hide');
     }
 
+    if (minuteS == 0 && secondS == 0 && minutesSession.textContent == 0 && timerStart === false && pressPause == false) {
+        createModalMessage('Session')
+        modalWindow.classList.add('show');
+        modalWindow.classList.remove('hide');
+    }
+
 })
 
 pause.addEventListener('click', () => {
     clearInterval(interval);
-    timerStart = false;
     pressPause = true;
+    if(timerStart === true) {
+        pause.classList.add('push_pause');
+        start.classList.remove('push_start');
+        pressPause = false;
+    }
+
 })
 
 refresh.addEventListener('click', clearAll);
@@ -190,7 +199,7 @@ function createModalMessage(time) {
 }
 
 function startTimer () {
-    if ( circles.textContent == 0 && timerStart === false && pressPause == false) { 
+    if (circles.textContent == 0 && timerStart === false && pressPause == false) { 
         audioStart.play();
         timerStart = true;
     }

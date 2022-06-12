@@ -10,6 +10,7 @@
 }
 
 body {
+  height: 100vh;
   min-width: 320px;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -153,6 +154,18 @@ body {
   border-radius: 25px;
 }
 
+.buttons .push_start {
+  background: #1ade5e;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.buttons .push_pause {
+  background: #e4cc48;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .modal__wrapper {
   position: fixed;
   top: 0;
@@ -232,21 +245,21 @@ body {
 }
 
 .pomodoro:nth-child(2) {
-  margin-left: 30px;
+  margin-left: 40px;
 }
 
 .pomodoro:nth-child(5) {
-  margin-left: 40px;
+  margin-left: 60px;
 }
 
 .pomodoro:nth-child(8) {
-  margin-left: 40px;
+  margin-left: 60px;
 }
 
 .circles {
   position: absolute;
-  top: 0px;
-  right: 200px;
+  top: -100px;
+  right: 110px;
   color: red;
   padding: 15px 30px;
   background: -webkit-gradient(linear, left top, left bottom, from(#ad1515), to(#e07620));

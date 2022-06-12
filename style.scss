@@ -10,6 +10,7 @@
 }
 
 body {
+    height: 100vh;
     min-width: 320px;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -124,6 +125,15 @@ body {
         font-size: 40px;
         border: 2px solid #651c16;
         border-radius:25px;
+    
+    }
+    & .push_start {
+        background: rgb(26, 222, 94);
+        transition: 0.3s;
+    }
+    & .push_pause {
+        background: rgb(228, 204, 72);
+        transition: 0.3s;
     }
 }
 
@@ -207,28 +217,30 @@ body {
 }
 
 .pomodoro:nth-child(2) {
-    margin-left: 30px;
+    margin-left: 40px;
 }
 
 .pomodoro:nth-child(5) {
-    margin-left: 40px;
+    margin-left: 60px;
 }
 
 .pomodoro:nth-child(8) {
-    margin-left: 40px;
+    margin-left: 60px;
 }
 
 
 .circles {
     position: absolute;
-    top: 0px;
-    right: 200px;
+    top: -100px;
+    right: 110px;
     color:red;
     padding: 15px 30px;
     background: linear-gradient(top, rgb(173, 21, 21), rgb(224, 118, 32));
     border-radius:15px;
     color: #fff;
 }
+
+
 
 
 .hide {

@@ -45,9 +45,34 @@
     }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:660px) {
+   
+    .pomodoros__container {
+        height: 150px;
+    }
+    
+    .pomodoro {
+        height: calc(40px + (80 - 40) * ((100vw - 320px) / (660 - 320)));
+        width: calc(40px + (80 - 40) * ((100vw - 320px) / (660 - 320)));
+        margin-top: calc(-12px + (-15 - 12) * ((100vw - 320px) / (660 - 320)));
+       
+    }
+    
+        .pomodoro:nth-child(2) {
+            margin-left: calc(20px + (40 - 20) * ((100vw - 320px) / (660 - 320)));
+        }
+        
+        .pomodoro:nth-child(5) {
+            margin-left: calc(20px + (60 - 20) * ((100vw - 320px) / (660 - 320)));
+        }
+        
+        .pomodoro:nth-child(8) {
+            margin-left: calc(20px + (60 - 20) * ((100vw - 320px) / (660 - 320)));
+        }
 
-
+        .circles {
+            right: 70px;
+        }
 }
 
 @media only screen and (max-width:480px) {
@@ -92,12 +117,39 @@
         margin-top: 150px;
     }
 
+
     .pomodoros__container {
+        height: 150px;
         margin-top: 150px;
     }
 
+    /* .pomodoro {
+        max-height: 70px;
+        width: 70px;
+        margin-top: -30px;
+    } */
+    
+    .pomodoro {
+        height: calc(60px + (80 - 60) * ((100vw - 320px) / (480 - 320)));
+        width: calc(60px + (80 - 60) * ((100vw - 320px) / (480 - 320)));
+        margin-top: calc(-20px + (-1 - 20) * ((100vw - 320px) / (480 - 320)));
+       
+    }
+    
+        .pomodoro:nth-child(2) {
+            margin-left: calc(20px + (40 - 20) * ((100vw - 320px) / (480 - 320)));
+        }
+        
+        .pomodoro:nth-child(5) {
+            margin-left: calc(20px + (60 - 20) * ((100vw - 320px) / (480 - 320)));
+        }
+        
+        .pomodoro:nth-child(8) {
+            margin-left: calc(20px + (60 - 20) * ((100vw - 320px) / (480 - 320)));
+        }
+
     .circles {
-        right: 160px;
+        right: 80px;
     }
 
     .settings .session-conteiner .btn__length, .settings .break-conteiner .btn__length {
