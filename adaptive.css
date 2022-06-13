@@ -1,5 +1,4 @@
 @media only screen and (max-width: 1990px) {
-
     body {
         zoom:80%
     }
@@ -7,10 +6,8 @@
     .pomodoros__container {
         margin-top: 100px;
     }
-
 }
 @media only screen and (max-width: 1200px) {
-
     body {
         zoom:55%;
         background-position: 8% 0%;
@@ -19,7 +16,6 @@
 }
 
 @media only screen and (max-width:992px) {
-
     .wrapper h1  {
         margin-top: 80px;
     }
@@ -55,42 +51,45 @@
         height: calc(40px + (80 - 40) * ((100vw - 320px) / (660 - 320)));
         width: calc(40px + (80 - 40) * ((100vw - 320px) / (660 - 320)));
         margin-top: calc(-12px + (-15 - 12) * ((100vw - 320px) / (660 - 320)));
-       
     }
     
-        .pomodoro:nth-child(2) {
-            margin-left: calc(20px + (40 - 20) * ((100vw - 320px) / (660 - 320)));
-        }
-        
-        .pomodoro:nth-child(5) {
-            margin-left: calc(20px + (60 - 20) * ((100vw - 320px) / (660 - 320)));
-        }
-        
-        .pomodoro:nth-child(8) {
-            margin-left: calc(20px + (60 - 20) * ((100vw - 320px) / (660 - 320)));
-        }
+    .pomodoro:nth-child(2) {
+        margin-left: calc(20px + (40 - 20) * ((100vw - 320px) / (660 - 320)));
+    }
+    
+    .pomodoro:nth-child(5) {
+        margin-left: calc(20px + (60 - 20) * ((100vw - 320px) / (660 - 320)));
+    }
+    
+    .pomodoro:nth-child(8) {
+        margin-left: calc(20px + (60 - 20) * ((100vw - 320px) / (660 - 320)));
+    }
 
-        .circles {
-            right: 70px;
-        }
+    .circles {
+        right: 70px;
+    }
 }
 
 @media only screen and (max-width:480px) {
 
     body {
         zoom:40%;
-        background-position: 8% 0%;
+        background-position: 1.5% 0%;
     }
 
     .wrapper h1  {
         margin-top: 10px;
     }
+
     .settings {
         flex-wrap: wrap;
         width: 700px;
         margin: 0 auto;
         font-size: 25px;
+    }
 
+    .settings .session-conteiner h2, .settings .break-conteiner h2 {
+        margin: 0;
     }
 
     .settings .session-conteiner, .settings .break-conteiner {
@@ -99,15 +98,13 @@
         width: 700px;
         flex-wrap: inherit;
         flex:0 1 auto;
-
     }
 
-    .timers__wrapper h2 {
-        font-size: 80px;
+    .settings .session-conteiner .btn__length, .settings .break-conteiner .btn__length {
+        width: 120px;
+        height: 120px;
     }
-    .settings .session-conteiner h2, .settings .break-conteiner h2 {
-        margin: 0;
-    }
+
     .settings .session-conteiner .text, .settings .break-conteiner .text {
         width: 300px;
     }
@@ -116,47 +113,54 @@
         margin-top: 70px;
     }
 
+    .timers__wrapper h2 {
+        font-size: 80px;
+    }
+
     .buttons {
         margin-top: 100px;
     }
-
 
     .pomodoros__container {
         height: 150px;
         margin-top: 90px;
     }
 
-
-    
-    .pomodoro {
+    /* .pomodoro {
         height: calc(60px + (80 - 60) * ((100vw - 320px) / (480 - 320)));
         width: calc(60px + (80 - 60) * ((100vw - 320px) / (480 - 320)));
         margin-top: calc(-20px + (-1 - 20) * ((100vw - 320px) / (480 - 320)));
        
+    } */
+    
+    .pomodoros__container {
+        position:fixed;
+        left: 0%;
+        bottom:5%;
+    }
+
+
+    .pomodoro:nth-child(2) {
+        margin-left: calc(20px + (40 - 20) * ((100vw - 320px) / (480 - 320)));
     }
     
-        .pomodoro:nth-child(2) {
-            margin-left: calc(20px + (40 - 20) * ((100vw - 320px) / (480 - 320)));
-        }
-        
-        .pomodoro:nth-child(5) {
-            margin-left: calc(20px + (60 - 20) * ((100vw - 320px) / (480 - 320)));
-        }
-        
-        .pomodoro:nth-child(8) {
-            margin-left: calc(20px + (60 - 20) * ((100vw - 320px) / (480 - 320)));
-        }
+    .pomodoro:nth-child(5) {
+        margin-left: calc(20px + (60 - 20) * ((100vw - 320px) / (480 - 320)));
+    }
+    
+    .pomodoro:nth-child(8) {
+        margin-left: calc(20px + (60 - 20) * ((100vw - 320px) / (480 - 320)));
+    }
 
     .circles {
         right: 80px;
     }
 
-    .settings .session-conteiner .btn__length, .settings .break-conteiner .btn__length {
-        width: 120px;
-        height: 120px;
-    }
 }
 
-@media only screen and (max-width:320px) {
-
+@media only screen and (max-width:480px) and (min-height: 650px) {
+    .pomodoros__container {
+        left: 0%;
+        bottom:10%;
+    }
 }
